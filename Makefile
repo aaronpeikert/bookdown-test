@@ -5,7 +5,7 @@ WORKDIR := $(CURDIR)
 all:
 
 publish/:
-	Rscipt -e "bookdown::render_site()"
+	Rscript -e "bookdown::render_book()"
 
 ### Wrap Commands ###
 # if a command is to be send to another process e.g. a container/scheduler use:
