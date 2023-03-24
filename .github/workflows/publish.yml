@@ -21,7 +21,11 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     needs: imagename
-    container: ghcr.io/${{needs.imagename.outputs.lowercase}}:main
+    container:
+      image: ghcr.io/${{needs.imagename.outputs.lowercase}}:main
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       -
         name: Checkout repository
