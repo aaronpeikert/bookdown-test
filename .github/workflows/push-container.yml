@@ -1,6 +1,5 @@
 name: Create and publish the required Docker image
-permissions:
-  contents: write
+
 on:
   push:
     branches: ['main']
