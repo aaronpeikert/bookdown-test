@@ -25,7 +25,7 @@ jobs:
       image: ghcr.io/${{needs.imagename.outputs.lowercase}}:main
       credentials:
         username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ secrets.GHA_PAT }}
     steps:
       -
         name: Checkout repository
